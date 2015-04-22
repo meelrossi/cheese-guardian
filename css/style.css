@@ -1,33 +1,32 @@
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url("../fonts/MYRIADPRO-REGULAR.OTF");
+}
+
+html {
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	font-size: 20px;
+	height: 100%;
+	font-family: 'Myriad Pro';
 }
 
 /*seccion features*/
 
-.features {
+.section.features {
 	background-color: #EEE;
-	padding-top: 70px;
-	padding-bottom: 30px;
-	text-align: center;
-}
-
-.features:before, .features:after {
-	content: "";
-	display: table;
-}
-
-.features:after {
-	clear: both;
 }
 
 .feature-element {
 	text-align: center;
 	display: inline-block;
 	width: 220px;
-	margin: 0 30px 40px 30px;
+	margin: 30px;
 	vertical-align: top;
+	min-height: 200px;
 }
 
 .feature-title {
@@ -35,6 +34,7 @@ body {
 	margin-left: 5px;
 	color: #111;
 	vertical-align: baseline;
+	font-size: 18px;
 }
 
 .feature-info {
@@ -42,6 +42,7 @@ body {
 	margin-left: 5px;
 	color: #999;
 	vertical-align: baseline;
+	font-size: 17px;
 }
 
 .triangular-separator {
@@ -53,24 +54,22 @@ body {
 
 /*seccion updates*/
 
-.updates {
+.section {
 	background-color: #f5c85f;
-	width: 100%;
 	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px 
+	padding: 30px 0;
 }
 
 .updates-title {
 	color: #fff;
-	margin-bottom: 20px;
+	margin: 0;
+	font-size: 18px;
 }
 
 .input-email {
 	border-radius: 7px;
 	width: 250px;
-	margin-bottom: 20px;
-	box-shadow: 0;
+	margin: 20px auto;
 	height: 25px;
 	border: 0;
 }
@@ -79,9 +78,11 @@ body {
 	border: solid 1px #fff;
 	background-color: #f5c85f; 
 	width: 80px;
+	margin:0 auto;
 	height: 30px;
 	border-radius: 7px;
 	color: #fff;
+	font-size: 16px;
 }
 
 /*seccion principal*/
@@ -91,30 +92,40 @@ body {
 	text-align: center;
 	padding: 40px 0;
 	width: 100%;
+	min-height: calc(100% - 600px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .principal {
-	display: flex;
-	justify-content: center;
+	display: block;
 }
 
 .separator {
 	display: inline-block;
 	width: 4px;
 	background: linear-gradient(0, #fff, #f5c85f, #fff);
+	min-height: 300px;
+	margin-left: 40px;
+	vertical-align: middle;
 }
 
 .principal-phone {
 	display: inline-block;
 	text-align: right;
 	vertical-align: middle;
-	padding-right: 40px;
 }
 
 .principal-logo {
 	display: inline-block;
 	text-align: left;
 	vertical-align: middle;
-	align-self: center;
 	padding-left: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    .separator, .principal-phone {
+        display: none;
+    }
 }
